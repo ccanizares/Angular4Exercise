@@ -1,0 +1,14 @@
+<div class="container">
+    <div *ngIf="model?.length > 0">
+        <div class="app-album-items row">
+            <div class="app-album-item col-md-4"
+                 *ngFor="let item of model">
+                 <a [routerLink]="['/album', item.id]">{{item?.title}}</a>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="model?.length == 0">
+        <span>THERE ARE NO RESULTS THAT MATCH YOUR SEARCH</span>
+    </div>
+</div>
+
